@@ -20,6 +20,20 @@ var obstacle9;
 var obstacle10;
 var obstacle11;
 var obstacle12;
+var obstacle13;
+var obstacle14;
+var obstacle15;
+var obstacle16;
+var obstacle17;
+var obstacle18;
+var obstacle19;
+var obstacle19;
+var obstacle20;
+var obstacle21;
+var obstacle22;
+var obstacle23;
+var obstacle24;
+var obstacle25;
 
 function preload(){
 
@@ -53,167 +67,50 @@ function draw() {
 	Body.setPosition(bountyHunter.body, {x:BountyHunterX, y:GravityThief.body.position.y});
 	bountyHunter.display();
 
-	spawnObstacles();
+	createObstacles(obstacle1, 600);
+	createObstacles(obstacle2, 625);
+	createObstacles(obstacle3, 650);
+	createObstacles(obstacle4, 675);
+	createObstacles(obstacle5, 700);
+	createObstacles(obstacle6, 725);
+	createObstacles(obstacle7, 750);
+	createObstacles(obstacle8, 775);
+	createObstacles(obstacle9, 800);
+	createObstacles(obstacle10, 825);
+	createObstacles(obstacle11, 850);
+	createObstacles(obstacle12, 875);
+	createObstacles(obstacle13, 900);
+	createObstacles(obstacle14, 925);
+	createObstacles(obstacle15, 950);
+	createObstacles(obstacle16, 975);
+	createObstacles(obstacle17, 1000);
+	createObstacles(obstacle18, 1025);
+	createObstacles(obstacle19, 1050);
+	createObstacles(obstacle20, 1075);
+	createObstacles(obstacle21, 1100);
+	createObstacles(obstacle22, 1125);
+	createObstacles(obstacle23, 1150);
+	createObstacles(obstacle24, 1175);
+	createObstacles(obstacle25, 1200);
 
 	drawSprites();
 
 }
 
-function spawnObstacles() {
-	if(frameCount%600===0){
+function createObstacles(obstacleNum, frames){
+
+	if(frameCount%frames===0){
 		var options={
 			frictionAir:0,
 			frictionStatic:0
 		}
-		obstacle1 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle1, {x:-6, y:0});
-		World.add(world, obstacle1);
+		obstacleNum = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
+		Body.setVelocity(obstacleNum, {x:-6, y:0});
+		World.add(world, obstacleNum);
 	}
-	if(obstacle1){
-		rect(obstacle1.position.x, obstacle1.position.y, 100, 10);
+	if(obstacleNum){
+		rect(obstacleNum.position.x, obstacleNum.position.y, 100, 10);
 	}
 
-	if(frameCount%650===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle2 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle2, {x:-6, y:0});
-		World.add(world, obstacle2);
-	}
-	if(obstacle2){
-		rect(obstacle2.position.x, obstacle2.position.y, 100, 10);
-	}
-
-	if(frameCount%700===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle3 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle3, {x:-6, y:0});
-		World.add(world, obstacle3);
-	}
-	if(obstacle3){
-		rect(obstacle3.position.x, obstacle3.position.y, 100, 10);
-	}
-
-	if(frameCount%750===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle4 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle4, {x:-6, y:0});
-		World.add(world, obstacle4);
-	}
-	if(obstacle4){
-		rect(obstacle4.position.x, obstacle4.position.y, 100, 10);
-	}
-	
-	if(frameCount%800===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle5 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle5, {x:-6, y:0});
-		World.add(world, obstacle5);
-	}
-	if(obstacle5){
-		rect(obstacle5.position.x, obstacle5.position.y, 100, 10);
-	}
-
-	if(frameCount%850===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle6 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle6, {x:-6, y:0});
-		World.add(world, obstacle6);
-	}
-	if(obstacle6){
-		rect(obstacle6.position.x, obstacle6.position.y, 100, 10);
-	}
-
-	if(frameCount%900===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle7 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle7, {x:-6, y:0});
-		World.add(world, obstacle7);
-	}
-	if(obstacle7){
-		rect(obstacle7.position.x, obstacle7.position.y, 100, 10);
-	}
-
-	if(frameCount%950===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle8 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle8, {x:-6, y:0});
-		World.add(world, obstacle8);
-	}
-	if(obstacle8){
-		rect(obstacle8.position.x, obstacle8.position.y, 100, 10);
-	}
-
-	if(frameCount%1000===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle9 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle9, {x:-6, y:0});
-		World.add(world, obstacle9);
-	}
-	if(obstacle9){
-		rect(obstacle9.position.x, obstacle9.position.y, 100, 10);
-	}
-
-	if(frameCount%1050===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle10 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle10, {x:-6, y:0});
-		World.add(world, obstacle10);
-	}
-	if(obstacle10){
-		rect(obstacle10.position.x, obstacle10.position.y, 100, 10);
-	}
-
-	if(frameCount%1100===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle11 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle11, {x:-6, y:0});
-		World.add(world, obstacle11);
-	}
-	if(obstacle11){
-		rect(obstacle11.position.x, obstacle11.position.y, 100, 10);
-	}
-
-	if(frameCount%1150===0){
-		var options={
-			frictionAir:0,
-			frictionStatic:0
-		}
-		obstacle12 = Bodies.rectangle(displayWidth, random(0,displayHeight), 100, 10, options);
-		Body.setVelocity(obstacle12, {x:-6, y:0});
-		World.add(world, obstacle12);
-	}
-	if(obstacle12){
-		rect(obstacle12.position.x, obstacle12.position.y, 100, 10);
-	}
 }
 
